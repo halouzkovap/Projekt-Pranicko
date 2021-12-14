@@ -1,19 +1,23 @@
 import React from 'react';
 import { render } from 'react-dom';
+import {BrowserRouter, Route,Routes,Link} from 'react-router-dom';
+import Navbar from './navbar';
+import Uvod from './uvod';
 import './style.css';
+import Vytvorit from './vytvorit';
+import Vyzvednout from './vyzvednout';
 
 const App = () => (
-  <>
-    {/*
-      Tady bude tvůj Vánoční přáníčko :)
+  <BrowserRouter>
+   <Navbar/>
 
-      - HTML/CSS podklady máš ve složce /html-vzor
-      - vyzobej si ze souborů HTML a CSS pro svoje komponenty
-      - aplikace 5 stránek (úvod, vyzvednutí přáníčka, vytvoření přáníčko, zobrazení kódu vytvořeného přáníčka, samotné přáníčko)
-      - použij router (musíš si ho nainstalovat)
-    */}
-    <p>Všechno (asi) funguje.</p>
-  </>
+
+   <Routes>
+    <Route path="/" element={<Uvod/>}/>
+    <Route path="/create" element={<Vytvorit/>}/>
+    <Route path="/pick" element={<Vyzvednout/>}/>
+   </Routes>
+  </BrowserRouter>
 );
 
 render(<App />, document.querySelector('#app'));
