@@ -16,7 +16,7 @@ const Vytvorit=()=>{
         sender: ""
       })
 
-      const [response,setResponse]=useState(undefined);
+      const [response,setResponse]=useState({undefined});
 
       const handleChange = e => {
         const { name, value } = e.target;
@@ -26,7 +26,7 @@ const Vytvorit=()=>{
         });
       };
 
-const  [result,setResult]=useState(undefined)
+const  [result,setResult]=useState()
 
       const handleSumbit =(event)=>{
           console.log("try send data")

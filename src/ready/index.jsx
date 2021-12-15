@@ -8,7 +8,7 @@ const Ready=({data})=>{
         <>
         <Header title="Přáníčko je připravené"/>
        { console.log(data.id)}
-      
+      <p>{data.id}</p>
         </>
     )
 }
